@@ -3,7 +3,7 @@
 ## Challenge API
 
 - O desafio API foi executado utilizando SoapUI e também um framework para testes BDD em API chamado **Karate**, para visualiza-lo basta importar o projeto **br.com.desafiosAME.API**
-- Executar o projeto com _mvn clean test -Dtest=KarateRunner_
+- Executar o projeto com: _mvn clean test -Dtest=KarateRunner_
 
 - Relatórios estarão disponíveis em _/target/surefire-reports/_
 
