@@ -11,7 +11,7 @@ private static WebDriver driver;
 	
 	public static WebDriver getDriver(){
 		
-		String driverpath = "/home/ricardo/Desktop/desafios AME/DesafiosAme/br.com.desafiosAME.front/src/test/resources/drivers/";
+		String driverpath = "./src/test/resources/drivers/";
 
 		switch(Configs.so) {
 		case linux:

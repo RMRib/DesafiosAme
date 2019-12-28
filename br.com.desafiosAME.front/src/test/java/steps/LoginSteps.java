@@ -11,6 +11,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import utils.InstanciaDrivers;
 import utils.Configs;
+import utils.RealizaCadastro;
 
 public class LoginSteps extends LoginPage{
 	
@@ -31,6 +32,11 @@ public class LoginSteps extends LoginPage{
 		clicarLinkSignin();
 	}
 
+	@Quando("^eu preencher o campo Email address com um email de cadastro ativo$")
+	public void eu_preencher_o_campo_Email_address_com_um_email_de_cadastro_ativo() throws Throwable {
+		preencherEmail(preencherEmailCadastrado());
+	}
+	
 	@Quando("^eu preencher o campo Email address com \"([^\"]*)\"$")
 	public void eu_preencher_o_campo_Email_address_com(String arg1) throws Throwable {
 		preencherEmail(arg1);
@@ -43,13 +49,13 @@ public class LoginSteps extends LoginPage{
 
 	@Quando("^clicar no botão Sign in$")
 	public void clicar_no_botão_Sign_in() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
 		clicarBotaoSignin();
 	}
 
 	@Então("^o acesso ao site é concedido$")
 	public void o_acesso_ao_site_é_concedido() throws Throwable {
 	   	Assert.assertEquals("MY ACCOUNT", obterTitulo());
+//	   	printScreen();
 	}
 
 	@Então("^a página \"([^\"]*)\" é exibida$")
@@ -60,6 +66,7 @@ public class LoginSteps extends LoginPage{
 	@Então("^o acesso a conta é negado$")
 	public void o_acesso_ao_site_é_negado() throws Throwable {
 	    Assert.assertEquals("There is 1 error", obterErro());
+//	   	printScreen();
 	}
 
 	@Então("^a mensagem \"([^\"]*)\" é exibida$")

@@ -2,6 +2,7 @@ package pages;
 
 import utils.ComandosSelenium;
 import utils.InstanciaDrivers;
+import utils.RealizaCadastro;
 
 import java.time.Duration;
 
@@ -54,4 +55,7 @@ public class LoginPage extends ComandosSelenium{
 		return mensagemErro;
 	}
 	
+	public String preencherEmailCadastrado() throws InterruptedException {
+		return RealizaCadastro.geraLogin("password");
+		}
 }
