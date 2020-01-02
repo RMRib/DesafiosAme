@@ -20,3 +20,5 @@
 - Para geração do relatório, após a instação do pacote Allure e execução do comando acima, executar o comando: _allure serve /home/path/to/project/target/surefire-reports/_ no terminal
 
 
+## CI - GitHub
+- Criei um workflow simples de CI utilizando o _"actions"_ do proprio GitHub, irá garantir que os testes(somente API por enquanto) sejam executados em cada push que for executado na **Master**
