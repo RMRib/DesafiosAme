@@ -14,4 +14,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -f DesafiosAme/br.com.desafiosAME.API/pom.xml clean test -Dtest=KarateRunner
+      run: mvn -f br.com.desafiosAME.API/pom.xml clean test -Dtest=KarateRunner
